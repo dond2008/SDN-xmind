@@ -159,3 +159,4 @@ git clone [git@git.komect.net:ISG/secogateway.git](http://git.komect.net/ISG/sec
 1. 安装 [sshfs](https://github.com/billziss-gh/sshfs-win)
 2. 安装 [WinFsp](http://www.secfs.net/winfsp/)
 3. 参照 [WinFsp文档](http://www.secfs.net/winfsp/) 进行配置
+
