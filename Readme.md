@@ -117,7 +117,8 @@ sGATE_GIT_VERS 记录了当前源码在 gitlab 服务器上面的版本信息
 
 #### 7. Windows 开发环境搭建
 
-+ 解决 git 出错的方法一（**适用于不在windows下查看、编辑linux内核代码的开发人员**）
++ 方法一:下载克隆（或屏蔽）部分文件代码（**适用于不在windows下查看、编辑linux内核代码的开发人员**）
+
 1. 说明
      **windows操作系统git下载克隆（或屏蔽）部分文件代码的方法** 
     使用以下代码的重点是，不能使用POWERSHELL/CMD，只能使用git bash，如果在POWERSHELL/CMD中操作，在最后一步命令的时候会报以下错误：
@@ -136,8 +137,10 @@ sGATE_GIT_VERS 记录了当前源码在 gitlab 服务器上面的版本信息
 4. 命令行 执行检出：（或使用TortoiseGit等图形化工具，执行检出）
     
         git checkout master
-------------
-+ 解决 git 出错的方法二
+
+----------------
++ 方法二:windows下模拟linux文件系统
+
 1. 下载并安装 [cygwin](http://cygwin.com/install.html)  
 2. 运行安装程序 ![安装界面](./docs/img/1.PNG)
 3. 在源选择界面中按图添加163源 [http://mirrors.163.com/cygwin/](http://mirrors.163.com/cygwin/) ![源设置界面](./docs/img/6.PNG)
@@ -150,7 +153,9 @@ git clone [git@git.komect.net:ISG/secogateway.git](http://git.komect.net/ISG/sec
 8. git clone 完成后，可以从 E:\my_projects\secogateway 访问文件。警告文件为内核源码，可以忽略 ![](./docs/img/A1.PNG)
 9. 可以将 kernel/linux-4.14.83/ 添加到本地 .gitignore 文件中，但不要将 .gitignore 文件提交到服务器
 
-+ 将服务器目录映射到 Windows 驱动器
+---------------
++ 方法三:将服务器目录映射到 Windows 驱动器（**网络IO非常慢，建议在服务器上编译**）
+
 1. 安装 [sshfs](https://github.com/billziss-gh/sshfs-win)
 2. 安装 [WinFsp](http://www.secfs.net/winfsp/)
 3. 参照 [WinFsp文档](http://www.secfs.net/winfsp/) 进行配置
