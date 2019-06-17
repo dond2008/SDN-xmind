@@ -136,7 +136,7 @@ sGATE_GIT_VERS 记录了当前源码在 gitlab 服务器上面的版本信息
 4. 命令行 执行检出：（或使用TortoiseGit等图形化工具，执行检出）
     
         git checkout master
-
+------------
 + 解决 git 出错的方法二
 1. 下载并安装 [cygwin](http://cygwin.com/install.html)  
 2. 运行安装程序 ![安装界面](./docs/img/1.PNG)
