@@ -124,24 +124,24 @@ sGATE_GIT_VERS 记录了当前源码在 gitlab 服务器上面的版本信息
         <code>error: Sparse checkout leaves no entry on working directory</code>
 2. 准备工作：启用git的sparse checkout功能（要求Cit 1.7+版本）
     
-        <pre>
+        <code>
         mkdir secogateway
         cd secogateway
         git init
         git remote add -f http://git.komect.net/ISG/secogateway.git
         git config core.sparsecheckout true
-        </pre>
+        </code>
 3. 设置检出的过滤规则：示例屏蔽kernel文件夹
     
-        <pre>
+        <code>
         echo '/*' >> .git/info/sparse-checkout #这一步不可省略
         echo '!/kernel/' >> .git/info/sparse-checkout
-        </pre>
+        </code>
 4. 命令行 执行检出：（或使用TortoiseGit等图形化工具，执行检出）
     
-        <pre>
+        <code>
         git checkout master
-        </pre>
+        </code>
 
 + 解决 git 出错的方法二
 1. 下载并安装 [cygwin](http://cygwin.com/install.html)  
